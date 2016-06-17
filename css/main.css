@@ -61,7 +61,7 @@ nav {
 }
 
 .logo{
-	background: url('../images/Logo-Verodalla-Noir.png') no-repeat center center;
+	background: url('../images/Logo-Verodalla-Noir-smaller.png') no-repeat center center;
 	background-size: contain;
 	width: 450px;
 	height: 300px;
@@ -124,7 +124,7 @@ nav {
 }
 
 nav .logo{
-	background: url('../images/Logo-Verodalla-Noir.png') no-repeat center center;
+	background: url('../images/Logo-Verodalla-Noir-smaller.png') no-repeat center center;
 	width:150px;
 	height:100px;
 	background-size:contain;
