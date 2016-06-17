@@ -1,0 +1,704 @@
+
+body {
+	margin:0;
+	padding:0;
+	width:100%;
+	font: 14px "Sorts Mill Goudy", Helvetica, Arial, sans-serif;
+	color:#76666a;
+	background:snow;
+}
+
+body.modal-open {
+	overflow: hidden;
+}
+
+.clearfix {
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+.cover_frame {
+	/*border-top: 100px solid white;*/
+	/*border-bottom: 100px solid white;*/
+}
+
+.col {
+	width:30%;
+	float:left;
+	display:block;
+}
+
+.splash {
+	background:url("../images/photo_entree.jpg") no-repeat center center;
+	background-size:cover;
+	width:100%;
+	min-height:700px;
+}
+
+.splash-cover {
+	background:rgba(255,255,255,0.2);
+	width:100%;
+	height:700px;
+	position:absolute;
+}
+
+.sign {
+	width:400px;
+	position:absolute;
+	top:1%;
+	left:5%;
+}
+
+nav {
+	padding: 0 0 0 20px;
+	height:100px;
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+
+.logo{
+	background: url('../images/Logo-Verodalla-Noir.png') no-repeat center center;
+	background-size: contain;
+	width: 450px;
+	height: 300px;
+	margin-top:100px;
+	float:left;
+}
+
+.social_media{
+	float:right;
+	width:366.66666px;
+	display:inline-block;
+	padding-top:20px;
+}
+
+.social_media div{
+	display:inline-block;
+	margin-right:50px;
+}
+
+.social_media div:hover{
+	opacity:0.8;
+}
+
+.twitter{
+	background: url('../images/twitter.png') no-repeat center 100%;
+	background-size: contain;
+	width: 35px;
+	height: 40px;
+}
+
+.facebook{
+	background: url('../images/facebook.png') no-repeat center center;
+	background-size: contain;
+	width: 25px;
+	height: 25px;
+}
+
+.instagram {
+	background: url('../images/instagram.png') no-repeat center center;
+	background-size: contain;
+	width: 25px;
+	height: 25px;
+}
+
+.contact {
+	background: url('../images/contact.svg') no-repeat center 200%;
+	background-size: contain;
+	width: 32px;
+	height: 32px;
+	padding-top:3px;
+	cursor:pointer;
+}
+
+.cover_photo {
+	background: url('../images/inner_journey.jpg') no-repeat center 43%;
+	background-size: contain;
+	width: 100%;
+	height: 100vh;
+
+}
+
+nav .logo{
+	background: url('../images/Logo-Verodalla-Noir.png') no-repeat center center;
+	width:150px;
+	height:100px;
+	background-size:contain;
+	margin-top: 0;
+	/*position:relative;*/
+}
+
+.inner_journey{
+	background: url('../images/inner_journey copy.jpg') no-repeat center center;
+	width:200px;
+	height:200px;
+	background-size: 200%;
+}
+.livinlulu{
+	background: url('../images/LivinLuLu.jpg') no-repeat center center;
+	width:200px;
+	height:200px;
+	background-size:cover;
+}
+
+.poppies{
+	background: url('../images/poppies.jpg') no-repeat center 60%;
+	width:200px;
+	height:200px;
+	/*background-size:cover;*/
+}
+.about{
+	background: url('../images/about.jpg') no-repeat center center;
+	width:200px;
+	height:200px;
+	background-size:cover;
+}
+.exhibits{
+	background: url('../images/exhibits.png') no-repeat center center;
+	width:200px;
+	height:200px;
+	background-size:cover;
+}
+.press{
+	background: url('../images/press.jpg') no-repeat center 0;
+	width:200px;
+	height:200px;
+	background-size:cover;
+}
+
+.gallery_item {
+	float:left;
+	margin:30px 50px;
+	/*border:3px solid transparent;*/
+	border-radius:5px;
+}
+
+.gallery_item:hover {
+
+}
+
+/*button {
+	border:0;
+	background:white;
+	position:relative;
+	bottom: 400px;
+	margin: 0 20px;
+	outline:none;
+	cursor:pointer;
+	display:none;
+}*/
+/*
+button:first-child{
+	width: 100px;
+	height: 175px;
+	background:url('../public/left_arr.png') no-repeat center center;
+	background-size:contain;
+	float:left;
+}
+*/
+/*button:nth-child(2) {
+	width: 100px;
+	height: 175px;
+	background:url('../public/right_arr.png') no-repeat center center;
+	background-size:contain;
+	float:right;
+
+}
+*/
+.main_gallery{
+	/*height: 550px;height:700px;*/
+	width:919px;
+	margin:0 auto 20px auto;
+	overflow:hidden;
+}
+
+
+
+
+a {
+  text-decoration:none;
+  color: #fe3333;
+}
+
+
+
+.section-photo {
+	float:left;
+	margin-right:20px;
+	margin-top:20px;
+}
+
+
+
+.sub-gallery {
+
+	/*margin:0 auto 50px auto;*/
+	clear:both;
+}
+
+.section_container {
+	width: 975px;
+	margin:0 auto;
+	overflow:hidden;
+	border-top:2px solid #76666a;
+	padding-top:15px;
+}
+
+
+#footer {
+	background: #76666a;
+	color:white;
+	padding:20px 0;
+	text-align: center;
+	position:absolute;
+	/*bottom:0;*/
+	width:100%;
+	/*height:100px;*/
+	margin-top:20px;
+
+}
+
+#footer a {
+	color:#F1C40F;
+}
+
+#footer a:hover {
+	color:#E77E23;
+}
+
+.cover {
+	width:195px;
+	height:195px;
+	background: rgba(0,0,0, 0.3);
+	display:none;
+	color:white;
+	text-align: center;
+	/*padding:1px;*/
+	border-radius:5px;
+	border:3px solid #fe3333;
+
+
+}
+
+
+.cover>p {
+	position:relative;
+	bottom:-160px;
+	font-size:1.5em;
+}
+
+.section-photo .cover{
+	width: 170px;
+	height: 170px;
+	font-size:0.5em;
+	top:10px;
+}
+
+.section-photo .cover>p {
+	bottom:-0px;
+}
+
+
+.desc {
+	width:50%;
+	float:right;
+}
+
+.section_title {
+	float:left;
+	font-size:3em;
+}
+
+
+
+/*right-pointing arrow*/
+.arrow {
+	background:url('../images/arrow.svg') no-repeat center center;
+	background-size:contain;
+	fill:#ffffff;
+	/*background:#000000;*/
+}
+
+
+.arrow-return {
+	background:url('../images/arrow-return.svg') no-repeat center center;
+	background-size:contain;
+	/*fill:#ffffff;*/
+	/*background:#000000;*/
+	opacity:0.5;
+}
+
+.arrow-return:hover {
+	opacity:1;
+}
+
+
+.arrow:hover {
+	opacity:0.7;
+}
+
+
+
+.arrow.down, .arrow-return.down{
+	-ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+.arrow.left{
+	-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.arrow.up,.arrow-return{
+	-ms-transform: rotate(270deg); /* IE 9 */
+    -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+    transform: rotate(270deg);
+}
+
+.arrow.small,.arrow-return.small{
+	width:100px;
+	height:100px;
+}
+
+.arrow.large{
+	width:200px;
+	height:200px;
+}
+
+.arrow.bottom-right,.arrow-return.bottom-right {
+	position:fixed;
+	bottom:25px;
+	right:50px;
+}
+
+.arrow-return.up {
+
+	bottom:100px;
+
+}
+
+.arrow.pos-right {
+	position:absolute;
+	right:-5vw;
+	top:35vh;
+}
+
+.arrow.pos-left {
+	position:absolute;
+	left:-5vw;
+	top:35vh;
+}
+
+.arrow.white {
+	fill:#fff;
+	color:#fff;
+}
+
+
+.sub-gallery.About {
+	width:175px;
+	float:left;
+	clear:none !important;
+}
+
+.desc.About {
+	float: right;
+	width: 500px;
+	font-size: 1.5em;
+	text-align: justify;
+	margin-top:20px;
+	line-height:1.5em;
+	letter-spacing: 0.1em;
+
+}
+
+
+.desc.About > p {
+	margin-bottom:20px;
+}
+
+.section_title.About {
+	float:none !important;
+}
+
+
+.sub-gallery.new_exhibits {
+
+
+}
+
+.desc.new_exhibits {
+
+display: block;
+width: 300px;
+font-size: 1.25em;
+clear:left;
+margin-top: 26px;
+overflow: hidden;
+float: none;
+padding-top: 29px;
+
+}
+
+
+.sub-gallery.Press img {
+	/*max-width:170px;*/
+	/*max-width: 170px;*/
+	/*padding: 10px 10px;*/
+	/*background: white;*/
+	/*max-height: 170px;*/
+	display: inline-block; /* Display inline-block, and absolutely NO FLOATS! */
+    margin-bottom: 20px;
+    width: 100%;
+
+}
+
+
+.sub-gallery.Press {
+	/*width:200px;*/
+	-moz-column-count: 4;
+    -moz-column-gap: 50px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 50px;
+    column-count: 4;
+    column-gap: 50px;
+    width: 975px;
+    margin-top: 63px;
+
+}
+
+
+
+.french {
+    background: url('images/press/France-flat-icon.png') no-repeat center center;
+    background-size: cover;
+    width:30px;
+    height:30px;
+    position: relative;
+    top: -60px;
+    float:left;
+}
+
+.english {
+    background: url('images/press/United-States.png') no-repeat center center;
+    background-size: cover;
+    width:30px;
+    height:30px;
+    position: relative;
+    float:right;
+    top: -60px;
+}
+
+
+.french, .english {
+    visibility:hidden;
+}
+
+
+.press-wrapper:hover>.french, .press-wrapper:hover>.english{
+    visibility:visible;
+}
+
+
+.press-wrapper {
+    overflow:hidden;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+    .section_title.Press {
+        font-size:5em;
+    }
+    .sub-gallery.Press {
+    /*width:200px;*/
+
+        width: 100%;
+        -moz-column-count: 1;
+        -moz-column-gap: 0;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 0;
+        column-count: 1;
+        column-gap: 0;
+
+    }
+
+    .sub-gallery.Press img {
+
+        display: block;
+        width: 50% !important;
+        margin-left:auto;
+        margin-right:auto;
+
+}
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-device-width: 480px) {
+	.desc.About {
+		float: none;
+		width:90% !important;
+		text-align: left;
+		letter-spacing:0;
+	}
+
+	.desc.About p  {
+		float: none;
+	}
+
+	.sub-gallery.About {
+		float:none;
+		width:100% !important;
+	}
+
+}
+
+
+
+
+@media only screen and (max-device-width: 480px) {
+
+	body { font-size:medium !important; }
+
+	.splash, .splash-cover,.social_media { display:none; }
+
+	div[class*="arrow"] { display:none !important; }
+
+	.logo { height:20em !important; margin-left:0 !important; }
+
+	img, .gallery_item,.cover,.main_gallery {
+		display:block;
+		width:100% !important;
+		float:none;
+		margin:12px 0;
+		padding:0;
+		background-size:cover !important;
+
+	}
+
+	div[data-name="Poppies"] {
+		background-position: 0px -350px !important;
+	}
+
+	div[data-name="Inner Journey"] {
+		background-position: 0 -20px !important;
+	}
+
+	div[data-name="Press"] {
+		background-position: -26px 15px !important;
+	}
+
+	div[data-name="Recent Exhibitions"] {
+		background-position: 0 -180px !important;
+	}
+	div[data-name="About"] {
+		background-position: 0 -213px !important;
+	}
+
+	div[data-name="LivenLuLu"] {
+		background-position: 0 -32px !important;
+	}
+
+	.main_gallery a {
+		display:block;
+	}
+
+	.gallery_item{
+		height:300px !important;
+		position:relative;
+		background-position:0 -100px !important;
+	}
+
+	.cover {
+		position:absolute;
+		bottom:0;
+		height:auto !important;
+		border:none !important;
+		margin:0;
+	}
+
+	.logo {
+		margin-left:5%;
+		display:block;
+		width:100% !important;
+		margin-top:12px !important;
+
+	}
+
+	nav { text-align: center }
+
+	.cover>p {
+		font-size:4em !important;
+		bottom:0px;
+
+
+	}
+
+	.section-photo {
+		float:none;
+		display:block;
+		width:550px !important;
+		height:550px !important;
+		margin-left:auto;
+		margin-right:auto;
+		position:relative;
+		margin-top:250px;
+	}
+
+	.section-photo .cover {
+		background:none;
+		padding-top:12px;
+		top:initial;
+		height:175px !important;
+		bottom: -187px !important;
+		display:block;
+		color:#76666a;
+	}
+
+
+	.desc {
+		float:none;
+		width:90%;
+		font-size:2.5em;
+		padding-left:32px;
+	}
+
+
+
+
+	.desc.new_exhibits {
+		width:90% !important;
+		padding-left:32px;
+	}
+
+	.desc.new_exhibits h3, .desc.new_exhibits h6 {
+		font-size:1.6666em;
+	}
+
+	.section_container {
+		width:100%;
+	}
+
+	.section_title{
+		float:none;
+		text-align: center;
+	}
+
+	#footer {
+		font-size:3em;
+	}
+
+}
+
+
