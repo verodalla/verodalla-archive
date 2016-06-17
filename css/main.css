@@ -476,7 +476,7 @@ padding-top: 29px;
 
 
 .french {
-    background: url('images/press/France-flat-icon.png') no-repeat center center;
+    background: url('../images/press/France-flat-icon.png') no-repeat center center;
     background-size: cover;
     width:30px;
     height:30px;
@@ -486,7 +486,7 @@ padding-top: 29px;
 }
 
 .english {
-    background: url('images/press/United-States.png') no-repeat center center;
+    background: url('../images/press/United-States.png') no-repeat center center;
     background-size: cover;
     width:30px;
     height:30px;
