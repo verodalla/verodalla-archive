@@ -8,14 +8,14 @@ $('.arrow-return').click(function () {
 });
 
 
- $('.section-photo').on('mouseover', function(e) {
-    var cover = $(e.target).find('.cover');
-    $(cover).css('display', 'inherit');
+ // $('.section-photo').on('mouseover', function(e) {
+ //    var cover = $(e.target).find('.cover');
+ //    $(cover).css('display', 'inherit');
 
-    $(cover).mouseout(function(){
-      $('.cover').css('display', 'none');
-    });
- });
+ //    $(cover).mouseout(function(){
+ //      $('.cover').css('display', 'none');
+ //    });
+ // });
 
   // 'click .flag': function(e) {
   //   e.prevenDefault();
