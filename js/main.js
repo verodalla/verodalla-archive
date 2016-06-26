@@ -3511,5 +3511,6 @@ function modalLauncher ($obj) {
 	return {init: init};
 }
 var galleryModalLauncher = modalLauncher($('.section-photo'));
-
-galleryModalLauncher.init();
+if (window.innerWidth > 600) {
+    galleryModalLauncher.init();
+}
