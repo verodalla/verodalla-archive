@@ -3400,8 +3400,12 @@ function utilityBelt() {
 			return element.outerHTML;
 		}).join('');
 	}
+    function escapeQuotes(string) {
+        return string.replace(/"/g, '&quot;');
+    }
 	return {
-		joinJQueryArray: joinJQueryArray
+		joinJQueryArray: joinJQueryArray,
+        escapeQuotes: escapeQuotes
 	}
 }
 
@@ -3421,7 +3425,7 @@ function modal ($obj) {
 	};
 
 	function open () {
-		console.log($obj.html());
+		// console.log($obj.html());
 		var modalObj = nanoModal("hi", config);
 		var gallerySlideshowBuilder = slideshowBuilder($obj);
 		var modalContent = gallerySlideshowBuilder.buildDOM();
@@ -3444,24 +3448,44 @@ function modal ($obj) {
 function transformDOM ($obj) {
 	return $.map($obj, function(element) {
 		var src = $(element).data('path');
-		return '<figure class="slideshow__figure"><img class="slideshow__figure__img" src="' + src + '"></figure>';
+        var caption = $(element).find('.cover').html();
+        // console.log(caption);
+		return '<figure class="slideshow__figure" data-caption="'+ myUtilityBelt.escapeQuotes(caption) + '"><img class="slideshow__figure__img" src="' + src + '"></figure>';
 	});
 }
 function slideshowBuilder ($obj) {
+
 	function buildDOM () {
 
 		var slides = myUtilityBelt.joinJQueryArray(transformDOM($obj));
-		return '<div class="slideshow">' + slides +  '</div>'
+		return '<div class="slideshow">' + slides +  '</div><div class="caption"></div>'
 	}
 
 	function initSlideshow() {
-		$('.slideshow').slick({
-			fade: true,
-  			cssEase: 'linear',
-  			prevArrow: '<button type="button" class="slick-prev icon-arrow-right2"></button>',
-  			nextArrow: '<button type="button" class="slick-next icon-arrow-right2"></button>'
-		});
+		var $slideshow = $('.slideshow');
+        // console.log(slideshowObj);
+        // showCaption(slideshowObj.getSlick(), 0)
+        $slideshow.on('afterChange', function (event, slick, currentSlide) {
+            showCaption(slick, currentSlide);
+        });
+
+        $slideshow.on('init', function (event, slick) {
+            showCaption(slick, 0);
+        });
+
+        $slideshow.slick({
+            fade: true,
+            cssEase: 'linear',
+            prevArrow: '<button type="button" class="slick-prev icon-arrow-right2"></button>',
+            nextArrow: '<button type="button" class="slick-next icon-arrow-right2"></button>'
+        });
 	}
+
+    function showCaption(slick, currentSlide) {
+        var $captionContianer = $('.caption');
+        $captionContianer.html($(slick.$slides[currentSlide]).data('caption'));
+        // console.log()
+    }
 
 	return {
 		buildDOM: buildDOM,
