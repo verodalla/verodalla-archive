@@ -3458,7 +3458,7 @@ function slideshowBuilder ($obj) {
 	function buildDOM () {
 
 		var slides = myUtilityBelt.joinJQueryArray(transformDOM($obj));
-		return '<div class="slideshow">' + slides +  '</div><div class="caption"></div>'
+		return '<nav><a href="/"><div class="logo"> </div></a><div class="social_media"><a href="http://twitter.com/verodalla" target="_blank"><div class="twitter"></div></a><a href="http://facebook.com/verodalla" target="_blank"><div class="facebook"></div></a><a href="http://instagram.com/verodalla_artist" target="_blank"><div class="instagram"></div></a><a href="mailto:contact@verodalla.com"><div class="contact"></div></a></div></nav><div class="slideshow">' + slides +  '</div><div class="caption"></div>'
 	}
 
 	function initSlideshow() {
