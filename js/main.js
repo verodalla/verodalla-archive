@@ -3411,7 +3411,7 @@ function utilityBelt() {
 
 var myUtilityBelt = utilityBelt();
 
-function modal ($obj) {
+function modal ($obj, e) {
 	var config = {
 		overlayClose: false,
 		autoRemove: true,
@@ -3427,7 +3427,7 @@ function modal ($obj) {
 	function open () {
 		// console.log($obj.html());
 		var modalObj = nanoModal("hi", config);
-		var gallerySlideshowBuilder = slideshowBuilder($obj);
+		var gallerySlideshowBuilder = slideshowBuilder($obj, e);
 		var modalContent = gallerySlideshowBuilder.buildDOM();
 		modalObj.setContent(modalContent);
 		modalObj.show();
@@ -3453,7 +3453,7 @@ function transformDOM ($obj) {
 		return '<figure class="slideshow__figure" data-caption="'+ myUtilityBelt.escapeQuotes(caption) + '"><img class="slideshow__figure__img" src="' + src + '"></figure>';
 	});
 }
-function slideshowBuilder ($obj) {
+function slideshowBuilder ($obj, e) {
 
 	function buildDOM () {
 
@@ -3462,6 +3462,7 @@ function slideshowBuilder ($obj) {
 	}
 
 	function initSlideshow() {
+        var slideIndex = $obj.index(e.currentTarget);
 		var $slideshow = $('.slideshow');
         // console.log(slideshowObj);
         // showCaption(slideshowObj.getSlick(), 0)
@@ -3471,6 +3472,7 @@ function slideshowBuilder ($obj) {
 
         $slideshow.on('init', function (event, slick) {
             showCaption(slick, 0);
+            $slideshow.slick('slickGoTo', slideIndex, false);
         });
 
         $slideshow.slick({
@@ -3479,6 +3481,8 @@ function slideshowBuilder ($obj) {
             prevArrow: '<button type="button" class="slick-prev icon-arrow-right2"></button>',
             nextArrow: '<button type="button" class="slick-next icon-arrow-right2"></button>'
         });
+
+
 	}
 
     function showCaption(slick, currentSlide) {
@@ -3496,8 +3500,8 @@ function slideshowBuilder ($obj) {
 
 function modalLauncher ($obj) {
 	function init () {
-		$obj.on('click', function () {
-			var galleryModal = modal($obj);
+		$obj.on('click', function (e) {
+			var galleryModal = modal($obj, e);
 			galleryModal.open();
 		});
 	}
