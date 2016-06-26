@@ -771,7 +771,10 @@ padding-top: 29px;
 	position: absolute;
 	transform: translate(-50%, -50%);
 }
-
+.caption {
+  text-align: center;
+  margin-top: 18px;
+}
 
 .slick-arrow {
 	position: absolute;
