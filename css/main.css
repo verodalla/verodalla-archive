@@ -177,8 +177,8 @@ nav .logo{
 	border-radius:5px;
 }
 
-.gallery_item:hover {
-
+.gallery_item:hover .cover {
+  display: block;
 }
 
 /*button {
