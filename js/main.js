@@ -3429,7 +3429,7 @@ function modal ($obj) {
 		var modalObj = nanoModal("hi", config);
 		var gallerySlideshowBuilder = slideshowBuilder($obj);
 		var modalContent = gallerySlideshowBuilder.buildDOM();
-		modalObj .setContent( modalContent );
+		modalObj.setContent(modalContent);
 		modalObj.show();
 		gallerySlideshowBuilder.initSlideshow();
 		// console.log('open SHIT')

@@ -785,7 +785,12 @@ padding-top: 29px;
 	height: 25px;
 	border-radius: 50%;
 	outline: 0;
+  cursor: pointer;
+  z-index:2;
+}
 
+.slick-arrow:hover {
+  opacity: 0.9;
 }
 .slick-prev {
 	transform: rotate(180deg);
