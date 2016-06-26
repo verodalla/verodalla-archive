@@ -3463,6 +3463,7 @@ function slideshowBuilder ($obj, e) {
 
 	function initSlideshow() {
         var slideIndex = $obj.index(e.currentTarget);
+        console.error('currTarget of event ====> ', e.currentTarget, 'index of currTarget ====> ', $obj.index(e.currentTarget))
 		var $slideshow = $('.slideshow');
         // console.log(slideshowObj);
         // showCaption(slideshowObj.getSlick(), 0)
@@ -3472,7 +3473,6 @@ function slideshowBuilder ($obj, e) {
 
         $slideshow.on('init', function (event, slick) {
             showCaption(slick, 0);
-            $slideshow.slick('slickGoTo', slideIndex, false);
         });
 
         $slideshow.slick({
@@ -3481,6 +3481,8 @@ function slideshowBuilder ($obj, e) {
             prevArrow: '<button type="button" class="slick-prev icon-arrow-right2"></button>',
             nextArrow: '<button type="button" class="slick-next icon-arrow-right2"></button>'
         });
+
+        $slideshow.slick('slickGoTo', slideIndex, false);
 
 
 	}
